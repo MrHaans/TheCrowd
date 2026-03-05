@@ -15,7 +15,7 @@ export class ThemeView {
 
   _init() {
     // Restore saved preference
-    const saved = localStorage.getItem(this._storageKey) || 'light';
+    const saved = localStorage.getItem(this._storageKey) || 'dark';
     this._apply(saved);
 
     // Bind click
