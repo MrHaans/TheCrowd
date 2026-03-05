@@ -1,0 +1,72 @@
+/* ============================================================
+   THEME.CSS — Light & Dark Mode CSS Custom Properties
+   Cronos Warden — Cronos Edition
+   ============================================================ */
+
+/* ── LIGHT MODE (default) ───────────────────────────────── */
+:root {
+  --bg-primary:      #f0f7ff;
+  --bg-secondary:    #e2f0fb;
+  --bg-card:         #ffffff;
+  --bg-terminal:     #ddeeff;
+  --nav-bg:          rgba(240, 247, 255, 0.85);
+
+  --accent:          #0d9de0;
+  --accent-bright:   #00c6ff;
+  --accent-dim:      #5bb8e8;
+  --accent-glow:     rgba(13, 157, 224, 0.3);
+
+  --text-primary:    #071828;
+  --text-secondary:  #1e5c85;
+  --text-muted:      #6aa0c0;
+  --text-terminal:   #0773a8;
+
+  --border:          rgba(13, 157, 224, 0.25);
+  --border-strong:   rgba(13, 157, 224, 0.6);
+
+  --danger:          #e04a2e;
+  --success:         #13c9a0;
+  --warn:            #f0a840;
+
+  --grid-color:      rgba(13, 157, 224, 0.07);
+  --transition-theme: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── DARK MODE ──────────────────────────────────────────── */
+[data-theme="dark"] {
+  --bg-primary:      #050d14;
+  --bg-secondary:    #091520;
+  --bg-card:         #0c1a26;
+  --bg-terminal:     #071220;
+  --nav-bg:          rgba(5, 13, 20, 0.9);
+
+  --accent:          #00c6ff;
+  --accent-bright:   #40daff;
+  --accent-dim:      #0d9de0;
+  --accent-glow:     rgba(0, 198, 255, 0.35);
+
+  --text-primary:    #e0f4ff;
+  --text-secondary:  #7ec8e8;
+  --text-muted:      #3a7a9c;
+  --text-terminal:   #00c6ff;
+
+  --border:          rgba(0, 198, 255, 0.15);
+  --border-strong:   rgba(0, 198, 255, 0.45);
+
+  --danger:          #ff5c3a;
+  --success:         #00e8b0;
+  --warn:            #ffc040;
+
+  --grid-color:      rgba(0, 198, 255, 0.05);
+}
+
+/* Dark mode specific enhancements */
+[data-theme="dark"] .hero h1 span {
+  text-shadow: 0 0 60px var(--accent-glow), 0 0 100px rgba(0, 198, 255, 0.15);
+}
+[data-theme="dark"] .nav-logo {
+  text-shadow: 0 0 30px var(--accent-glow);
+}
+[data-theme="dark"] body::after {
+  background: radial-gradient(ellipse, rgba(0, 198, 255, 0.07) 0%, transparent 70%);
+}
